@@ -2,6 +2,7 @@ export interface SlideData {
   title: string;
   content: string[]; // Array of bullet points
   layout?: 'title_only' | 'content_only' | 'full';
+  imageUrl?: string;
 }
 
 export type PresentationData = SlideData[];

@@ -14,6 +14,13 @@ const Slide: React.FC<SlideProps> = ({ slide, watermarkText }) => {
     <div
       className={`absolute inset-0 w-full h-full p-8 md:p-12 lg:p-16 flex flex-col justify-center items-center text-center`}
     >
+      {slide.imageUrl && (
+        <div className="absolute inset-0 w-full h-full -z-10">
+            <img src={slide.imageUrl} alt={slide.title} className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-slate-900/70"></div>
+        </div>
+      )}
+
       {layout !== 'content_only' && slide.title && (
         <h2 className="text-3xl md:text-5xl font-bold text-cyan-300 drop-shadow-lg mb-6 animate-fade-in-down">
           {slide.title}
@@ -32,7 +39,7 @@ const Slide: React.FC<SlideProps> = ({ slide, watermarkText }) => {
           ))}
         </ul>
       )}
-      <div className="absolute bottom-4 right-4 text-xs text-white/20 font-mono">
+      <div className="absolute bottom-4 right-4 text-sm text-white/50 font-mono tracking-wider">
         {watermarkText}
       </div>
     </div>
