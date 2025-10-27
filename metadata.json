@@ -1,0 +1,5 @@
+{
+  "name": "AI Animated PPT Builder",
+  "description": "An application that automatically generates responsive and animated presentations from user prompts or uploaded files, complete with a custom watermark.",
+  "requestFramePermissions": []
+}
